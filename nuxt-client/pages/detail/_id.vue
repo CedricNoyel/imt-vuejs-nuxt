@@ -1,6 +1,6 @@
 <template>
   <b-container fluid="lg" v-if="detailShow">
-    <b-row>
+    <b-row v-if="detailShow.images.banner">
       <b-img
         class="fullWidth"
         :src="detailShow.images.banner"

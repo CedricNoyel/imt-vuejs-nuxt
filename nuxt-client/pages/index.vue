@@ -20,6 +20,7 @@ export default {
     this.series = await fetch('http://localhost:4000/rest/shows').then((res) =>
       res.json()
     )
+    this.series.map((tvshow) => this.$store.commit('tvshows/add', tvshow))
   },
 }
 </script>
