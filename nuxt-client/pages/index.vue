@@ -2,7 +2,12 @@
   <div class="container">
     <div>
       <!-- <h3>Page accueil</h3> -->
-      <b-container fluid="xl">
+      <div class="sub-container-1">
+        <NuxtLink to="ajout">
+          <b-button pill variant="primary">Ajouter une série</b-button>
+        </NuxtLink>
+      </div>
+      <b-container fluid="xl" class="sub-container-2">
         <b-row v-for="serie in series" :key="serie.id">
           <b-col><Carte :serie="serie"></Carte></b-col>
         </b-row>
@@ -33,6 +38,17 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+.sub-container-1 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+}
+
+.sub-container-2 {
+  margin: 20px auto;
 }
 
 .title {

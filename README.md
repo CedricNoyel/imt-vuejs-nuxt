@@ -1,6 +1,7 @@
 # Install dependencies
 
 `cd nuxt-client | npm i`
+
 `cd server | npm i`
 
 ## Run client
@@ -13,7 +14,7 @@
 
 `cd server`
 
-`npm start`
+`npm run start`
 
 ## Build and start for production
 
