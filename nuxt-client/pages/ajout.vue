@@ -12,13 +12,13 @@
 
       <b-form-group
         id="input-group-2"
-        label="Titre:"
+        label="Description:"
         label-for="textarea-description"
       >
         <b-form-textarea
           id="textarea-description"
           v-model="form.description"
-          placeholder="Entrez une description pour la série"
+          placeholder="une description pour la série"
           rows="3"
           max-rows="6"
         ></b-form-textarea>
@@ -36,13 +36,6 @@
           required
           placeholder="3"
         ></b-form-input>
-      </b-form-group>
-
-      <b-form-group id="input-group-4">
-        <b-form-checkbox-group v-model="form.checked" id="checkboxes-4">
-          <b-form-checkbox value="me">Check me out</b-form-checkbox>
-          <b-form-checkbox value="that">Check that out</b-form-checkbox>
-        </b-form-checkbox-group>
       </b-form-group>
 
       <b-button type="submit" block variant="primary">Ajouter</b-button>
