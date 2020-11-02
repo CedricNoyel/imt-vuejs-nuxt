@@ -1,21 +1,32 @@
 <template>
-  <div>
-    <div class="container">
-      <div>
-        <p>Page accueil</p>
-        <!-- CONTENT -->
-      </div>
+  <div class="container">
+    <div>
+      <!-- <h3>Page accueil</h3> -->
+      <b-container fluid="xl">
+        <b-row v-for="serie in series" :key="serie.id">
+          <b-col><Carte :serie="serie"></Carte></b-col>
+        </b-row>
+      </b-container>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return { series: [] }
+  },
+  async fetch() {
+    this.series = await fetch('http://localhost:4000/rest/shows').then((res) =>
+      res.json()
+    )
+  },
+}
 </script>
 
 <style>
 .container {
-  margin: 0 auto;
+  margin: 30px auto;
   min-height: 100vh;
   display: flex;
   justify-content: center;
