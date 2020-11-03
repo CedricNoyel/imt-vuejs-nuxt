@@ -42,7 +42,7 @@
         ><b-embed
           type="iframe"
           aspect="16by9"
-          src="https://www.youtube.com/embed/5PxLidxnAE8"
+          :src="'https://www.youtube.com/embed/' + detailShow.next_trailer"
           allowfullscreen
         ></b-embed
       ></b-col>
